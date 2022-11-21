@@ -1,0 +1,247 @@
+/* CSS Document */
+
+$white: #fff;
+$black: #222222;
+$drkblue: #003249;
+$midblue: #007ea7;
+$lgtblue: #a9ede9;
+$hlblue: #cbe4e7;
+$lgtpink: #fbd6e3;
+
+/* STRUCTURE & NAV */
+
+body {
+    background: #a9ede9;
+    background: linear-gradient(to bottom, $lgtblue, $hlblue);
+    background-repeat: no-repeat;
+    font-family: 'Lato', sans-serif;
+    color: $black;
+    height: 100vh;
+}
+
+header {
+    background-color: $white;
+    width: 100%;
+}
+
+main {
+    max-width: 1200px;
+    height: calc(100% - 120px);
+    margin: auto;
+    padding: 0px 40px 0px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+        max-width: 50%;
+    }
+
+    i {
+        font-size: 3rem;
+        margin: 0px 15px 0px 0px;
+        color: $midblue;
+        cursor: pointer;
+
+        &:hover {
+            color: $drkblue;
+        }
+    }
+}
+
+.container {
+    width: 100vw;
+    margin: auto;
+}
+
+#logo {
+    height: 100px;
+    cursor: pointer;
+    fill: $midblue;
+    stroke: $midblue;
+
+    &:hover {
+        fill: $drkblue;
+        stroke: $drkblue;
+    }
+}
+
+.top-nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    i {
+        font-size: 2rem;
+        margin: 20px;
+        color: $midblue;
+        cursor: pointer;
+
+        &:hover {
+            color: $drkblue;
+        }
+    }
+}
+#menu-btn {
+    display: none;
+}
+
+/* TEXT AND LINK STYLES */
+h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.blue-txt {
+    color: $midblue;
+}
+
+a {
+    text-decoration: none;
+    color: $midblue;
+
+    &:hover {
+        color: $drkblue;
+    }
+}
+
+.links {
+    font-weight: 700;
+
+    a {
+        margin: 20px;
+    }
+}
+
+.main-txt {
+    margin-top: -100px;
+}
+
+.hero-header {
+    margin: 20px 0px 20px 0px;
+
+    h1,
+    h2 {
+        margin: 0;
+    }
+}
+
+/* FACE SVG IN MAIN SECTION */
+#face {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+}
+
+/* MEDIA QUERIES - FACE */
+@media only screen and (max-width: 1700px) {
+    #face {
+        height: 50%;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    #face {
+        height: 48%;
+    }
+    .main-txt {
+        margin-top: -200px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    main p {
+        max-width: 100%;
+    }
+    #face {
+        height: 35%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #face {
+        display: none;
+    }
+}
+
+
+/* ANIMATION */
+.animate-logo path {
+    stroke-dasharray: 210;
+    stroke-dashoffset: 210;
+    stroke-linecap: round;
+    -webkit-animation: dash 2s forwards;
+    animation: dash 2s forwards
+}
+
+.animate-logo g {
+    -webkit-animation: fill-in 1s 1s forwards;
+    animation: fill-in 1s 1s forwards;
+    fill-opacity: 0
+}
+
+.animate-logo2 path {
+    stroke-dasharray: 210;
+    stroke-dashoffset: 210;
+    stroke-linecap: round;
+    -webkit-animation: dash2 2s forwards;
+    animation: dash2 2s forwards
+}
+
+.animate-logo2 g {
+    -webkit-animation: fill-in2 1s 1s forwards;
+    animation: fill-in2 1s 1s forwards;
+    fill-opacity: 0
+}
+
+@-webkit-keyframes dash {
+    to {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0
+    }
+}
+
+@-webkit-keyframes fill-in {
+    to {
+        fill-opacity: 1
+    }
+}
+
+@keyframes fill-in {
+    to {
+        fill-opacity: 1
+    }
+}
+
+@-webkit-keyframes dash2 {
+    to {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes dash2 {
+    to {
+        stroke-dashoffset: 0
+    }
+}
+
+@-webkit-keyframes fill-in2 {
+    to {
+        fill-opacity: 1
+    }
+}
+
+@keyframes fill-in2 {
+    to {
+        fill-opacity: 1
+    }
+}
+
+/* END CSS DOC */
