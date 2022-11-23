@@ -17,13 +17,20 @@ body {
     font-family: 'Lato', sans-serif;
     color: $black;
     height: 100vh;
+    overflow-y: hidden;
 }
 
 header {
     background-color: $white;
     width: 100%;
+    height: 120px;
+    ul {
+	list-style-type: none;
+    li {
+        display: inline;
+    }
 }
-
+}
 main {
     max-width: 1200px;
     height: calc(100% - 120px);
@@ -32,7 +39,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     p {
         max-width: 50%;
     }
@@ -72,7 +78,6 @@ main {
     padding: 10px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     i {
         font-size: 2rem;
         margin: 20px;
@@ -84,8 +89,13 @@ main {
         }
     }
 }
-#menu-btn {
+#menu-btn   {
     display: none;
+    width: 50px;
+    position: absolute;
+	top: 20px;
+	right: 5px;
+    text-align: center;
 }
 
 /* TEXT AND LINK STYLES */
@@ -109,7 +119,8 @@ a {
 
 .links {
     font-weight: 700;
-
+    display: flex;
+    align-items: center;
     a {
         margin: 20px;
     }
@@ -121,12 +132,12 @@ a {
 
 .hero-header {
     margin: 20px 0px 20px 0px;
-
     h1,
     h2 {
         margin: 0;
     }
 }
+
 
 /* FACE SVG IN MAIN SECTION */
 #face {
@@ -163,6 +174,28 @@ a {
 @media only screen and (max-width: 768px) {
     #face {
         display: none;
+    }
+    #menu-btn {
+        display: block;
+    }
+    #h_nav	{
+        display: none;
+        align-content: center;
+        align-items: center;
+    }
+    .links {
+        align-content: center;
+    }
+    header ul li {
+        display: block;
+        margin: 50px;
+        text-align: center;
+        font-size: 3rem;
+    }
+}
+@media only screen and (min-width: 768px) {
+    #h_nav	{
+        display: inline;
     }
 }
 
