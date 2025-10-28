@@ -1,7 +1,7 @@
 /* CSS Document */
 /* STRUCTURE & NAV */
 body {
-  max-width: 1920px;
+  max-width: 100%;
   background: #a9ede9;
   background: linear-gradient(to bottom, #a9ede9, #e5f1f1);
   background-repeat: no-repeat;
